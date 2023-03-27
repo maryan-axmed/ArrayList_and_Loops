@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Runner {
 
@@ -21,17 +19,22 @@ public class Runner {
 //        3. Add "Islay" after "Jura" and before "Mull"
                 scottishIslands.add(2,"Islay");
 //        4. Print out the index position of "Skye"
-//                int[] scottishislands.add("Jura", "Mull", "skye", "Arran", "Tresco");
-//                for (int i = "skye", i < scottishislands.length);
-//                System.out.println(scottishIslands [i]);
                 int skyeIndex = scottishIslands.indexOf("Skye");
                 System.out.println(skyeIndex);
+//                answer: java return '4'.
 //        5. Remove "Tresco" from the list by name
+                scottishIslands.remove("Tresco");
 //        6. Remove "Arran" from the list by index
+                scottishIslands.remove(5);
 //        7. Print the number of islands in your arraylist
+                System.out.println("The size of the ArrayList is: " + scottishIslands.size());
 //        8. Sort the list alphabetically
-//        9. Print out all the islands using a for loop
+//                Arrays.sort(scottishIslands, Collections.sort());
 
+//        9. Print out all the islands using a for loop
+            for(String island: scottishIslands) {
+                System.out.println(island);
+            }
         System.out.println(scottishIslands);
 
 //        NUMBERS
@@ -41,6 +44,23 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+//             for (int i = 1; i<=4; i+2=); {
+//                 numbers.a
+//                              }
+        List<Integer> evenNumbers = new ArrayList<>();
+//        for (int i = 0; i < numbers.size(); i++) {
+//            if (i % 2 == 0) {
+//                evenNumbers.add(i);
+//                System.out.println(evenNumbers);
+//            }
+        for (int i = 0; i < numbers.size(); i++) { //change condition
+            if (i % 2 == 0) {
+                evenNumbers.add(i);
+                System.out.println(evenNumbers);
+            }
+        }
+//          for (int i = 0; i < numbers.size(); i++)
+                if (in)
 //        2. Print the difference between the largest and smallest value
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
 //        4. Print the sum of the numbers,
