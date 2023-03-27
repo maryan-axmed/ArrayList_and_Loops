@@ -29,7 +29,8 @@ public class Runner {
 //        7. Print the number of islands in your arraylist
                 System.out.println("The size of the ArrayList is: " + scottishIslands.size());
 //        8. Sort the list alphabetically
-//                Arrays.sort(scottishIslands, Collections.sort());
+               Collections.sort(scottishIslands);
+        System.out.println("After sort" + scottishIslands);
 
 //        9. Print out all the islands using a for loop
             for(String island: scottishIslands) {
@@ -48,22 +49,36 @@ public class Runner {
 //                 numbers.a
 //                              }
         List<Integer> evenNumbers = new ArrayList<>();
-//        for (int i = 0; i < numbers.size(); i++) {
-//            if (i % 2 == 0) {
-//                evenNumbers.add(i);
-//                System.out.println(evenNumbers);
-//            }
-        for (int i = 0; i < numbers.size(); i++) { //change condition
-            if (i % 2 == 0) {
-                evenNumbers.add(i);
-                System.out.println(evenNumbers);
+        for (int number : numbers) { //change condition
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
             }
         }
-//          for (int i = 0; i < numbers.size(); i++)
-                if (in)
+        System.out.println(evenNumbers);
+//
 //        2. Print the difference between the largest and smallest value
+        int maxValue = Collections.max(numbers);
+        int minValue = Collections.min(numbers);
+        int result = maxValue - minValue;
+        System.out.println(result);
+
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
-//        4. Print the sum of the numbers,
+        boolean resultOneAndOne = false;
+        for(int i = 0; i < numbers.size(); i++) {
+            if(numbers.get(i) == 1 && numbers.get(i+1) ==1) {
+                resultOneAndOne = true;
+            }
+        }
+        System.out.println(resultOneAndOne);
+
+//        4. Print the sum of the numbers // expected to be 156
+//            int numbers= new int[1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7]
+            int sum =0;
+            for (int i=0; i <numbers.size(); i++){
+                sum = sum + numbers.get(i);
+            }
+            System.out.println("Sum value of numbers is:" + sum);
+
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
