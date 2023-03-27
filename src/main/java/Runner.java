@@ -85,6 +85,23 @@ public class Runner {
 //
 //          So [2, 7, 13, 2] would have sum of 9.
 
+//        int sumTwo =0;
+//        for (int i=0; i < numbers.size(); i++) {
+//            if(numbers.get(i) == 13); {
+//                break;
+//            }
+//            sumTwo = sumTwo + numbers.get(i);
+//        }
+//        System.out.println("Sum value of numbers is:" + sumTwo);
+
+        int sumTwo = 0;
+        if(numbers.get(i) ==13) {
+            for(i = 0; i < numbers.size(); i++) {
+                sumTwo = sumTwo + numbers.get(i);
+            }
+            break;
+        }
+        System.out.println("Sum value of numbers is:" + sumTwo);
     }
 
 }
