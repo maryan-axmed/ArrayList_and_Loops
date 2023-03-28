@@ -49,7 +49,7 @@ public class Runner {
 //                 numbers.a
 //                              }
         List<Integer> evenNumbers = new ArrayList<>();
-        for (int number : numbers) { //change condition
+        for (int number : numbers) {
             if (number % 2 == 0) {
                 evenNumbers.add(number);
             }
@@ -85,23 +85,24 @@ public class Runner {
 //
 //          So [2, 7, 13, 2] would have sum of 9.
 
-//        int sumTwo =0;
-//        for (int i=0; i < numbers.size(); i++) {
-//            if(numbers.get(i) == 13); {
-//                break;
-//            }
-//            sumTwo = sumTwo + numbers.get(i);
-//        }
-//        System.out.println("Sum value of numbers is:" + sumTwo);
-
-        int sumTwo = 0;
-        if(numbers.get(i) ==13) {
-            for(i = 0; i < numbers.size(); i++) {
-                sumTwo = sumTwo + numbers.get(i);
+//our attempt: we put a ';' after the if statement. when removed, the code worked!!
+        int sumTwo =0;
+        for (int i=0; i < numbers.size(); i++) {
+            if(numbers.get(i) == 13) {
+                break;
             }
-            break;
+            sumTwo = sumTwo + numbers.get(i);
         }
         System.out.println("Sum value of numbers is:" + sumTwo);
+//solution:
+        int total13 = 0;
+        for (int i = 0; i < numbers.size() ; i++) {
+            if(numbers.get(i) == 13) {
+                break;
+            } total13 += numbers.get(i);
+        }
+        System.out.println(total13);
+
     }
 
 }
