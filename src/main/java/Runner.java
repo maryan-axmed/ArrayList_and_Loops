@@ -93,7 +93,8 @@ public class Runner {
             }
             sumTwo = sumTwo + numbers.get(i);
         }
-        System.out.println("Sum value of numbers is:" + sumTwo);
+        System.out.println("Sum value of numbers is before the number 13:" + sumTwo);
+
 //solution:
         int total13 = 0;
         for (int i = 0; i < numbers.size() ; i++) {
